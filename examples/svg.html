@@ -1,0 +1,40 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div></div>
+    <div id="tree"></div>
+    <div class="house"></div>
+    <div class="house"></div>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      function createSVG() {
+        mySVG = d3.select('body').append('svg')
+                                    .attr('height', '800')
+                                    .attr('width', '500');
+        mySVG.append('circle')
+                .attr('id', 'start')
+                .attr('class', 'foobar');
+        mySVG.append('circle')
+                .attr('id', 'end')
+                .attr('class', 'foobar');
+        mySVG.append('line')
+                .attr('class', 'foobar');
+      }
+
+      function thickenCircle() {
+        var circles = d3.selectAll('circle')
+                          .attr('r', '20');
+      }
+
+      function moveCircles() {
+        d3.select('#start')
+            .attr('cx', '100')
+            .attr('cy', '100');
+        d3.select('#end')
+            .attr('cx', '200')
+            .attr('cy', '200');
+      }
+    </script>
+  </body>
+</html>

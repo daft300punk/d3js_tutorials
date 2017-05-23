@@ -18,3 +18,20 @@
     ///
   });
 ```
+
+### SVG
+```javascript
+  function createSVG() {
+    mySVG = d3.select('body').append('svg')
+                                .attr('height', '800')
+                                .attr('width', '500');
+    mySVG.append('circle')
+            .attr('id', 'start')
+            .attr('class', 'foobar');
+    mySVG.append('circle')
+            .attr('id', 'end')
+            .attr('class', 'foobar');
+    mySVG.append('line')
+            .attr('class', 'foobar');
+  }
+```
