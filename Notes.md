@@ -35,3 +35,11 @@
             .attr('class', 'foobar');
   }
 ```
+### Data Binding
+```javascript
+  dots = viz.selectAll('cirlce')
+              .data(data)
+              .enter()
+              .append('circle');
+  dots.attr('r', function(d) { return Math.abs(d.TMAX); });
+```
